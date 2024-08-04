@@ -5,44 +5,66 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home page</title>
-  </head>
-  <body>
-    <style>
-      h1 {
-        text-align:center;
-        font-size:45px;
-        font-family: roboto;
-        font-weight:normal;
-        font-color:rgb(100,100,100);
-      }
+  <style>
+    h1 {
+      text-align: center;
+      font-size: 45px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: normal;
+      color: rgb(100, 100, 100);
+    }
 
-      #banner{
-        width:100;
-        height:600px;
-        object-fit:cover;
-      }
+    #banner {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
 
-      h2{
-        font-size:30px;
-        font-family: roboto;
-        text-align:center;
-        font-weight:normal;
-        font-color:rgb(80,80,80);
-      }
+    h2 {
+      font-size: 30px;
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      font-weight: normal;
+      color: rgb(80, 80, 80);
+    }
 
-      #banner{
-        width:100;
-        height:600px;
-        object-fit:cover;
-      }
-    </style>
+    p {
+      font-family: 'Roboto', sans-serif;
+      color: rgb(60, 60, 60);
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .contact-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
     <h1>Carreiras Python</h1>
-    <p>aqui vc encontra vagas em python</p>
-    <img id="banner" src="{{url_for('static', filename='carreira.jpg')}}"/>
+  </header>
+  <main>
+    <p>Aqui você encontra vagas em Python</p>
+    <img id="banner" src="{{url_for('static', filename='carreira.jpg')}}" alt="Banner de carreiras em Python"/>
     <h2>Sobre o site</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <h2>Vagas abertas </h2>
-    <p> aqui será retornado vagas em python </p>
-    <button> entrar em contato</button>
-  </body>
+    <h2>Vagas abertas</h2>
+    <p>Aqui serão retornadas vagas em Python</p>
+    <button class="contact-button">Entrar em contato</button>
+  </main>
+</body>
 </html>
