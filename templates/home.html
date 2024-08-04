@@ -7,8 +7,42 @@
   <title>Home page</title>
   </head>
   <body>
-    <h2>carreiras python</h2>
+    <style>
+      h1 {
+        text-align:center;
+        font-size:45px;
+        font-family: roboto;
+        font-weight:normal;
+        font-color:rgb(100,100,100);
+      }
+
+      #banner{
+        width:100;
+        height:600px;
+        object-fit:cover;
+      }
+
+      h2{
+        font-size:30px;
+        font-family: roboto;
+        text-align:center;
+        font-weight:normal;
+        font-color:rgb(80,80,80);
+      }
+
+      #banner{
+        width:100;
+        height:600px;
+        object-fit:cover;
+      }
+    </style>
+    <h1>Carreiras Python</h1>
     <p>aqui vc encontra vagas em python</p>
-    <img height="320px" src="{{url_for('static', filename='carreira.jpg')}}"/>
+    <img id="banner" src="{{url_for('static', filename='carreira.jpg')}}"/>
+    <h2>Sobre o site</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h2>Vagas abertas </h2>
+    <p> aqui será retornado vagas em python </p>
+    <button> entrar em contato</button>
   </body>
 </html>
