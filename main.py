@@ -2,40 +2,37 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+VAGAS = [{
+    'id': 1,
+    'titulo': 'analista de dados',
+    'localidade': 'Rio de Janeiro',
+    'salario': 'R$ 5.000,00'
+}, {
+    'id': 2,
+    'titulo': 'desenvolvedor frontend',
+    'localidade': 'Parana',
+    'salario': 'R$ 3.500,00'
+}, {
+    'id': 3,
+    'titulo': 'analista de dados',
+    'localidade': 'sao paulo',
+    'salario': 'R$ 5.000,00'
+}, {
+    'id': 4,
+    'titulo': 'analista de dados',
+    'localidade': 'Rio de Janeiro',
+    'salario': 'R$ 3.500,00'
+}, {
+    'id': 5,
+    'titulo': 'UI/UIX desing',
+    'localidade': 'Malta',
+    'salario': 'R$ 2.500,00'
+}]
+
 
 @app.route("/")
 def hello_world():
-  return render_template("home.html")
-
-VAGAS= [
-  {
-    'id':1,
-    'titulo':'analista de dados',
-    'localidade':'Rio de Janeiro',
-    'salario':'R$ 5.000,00'
-  },
-  {
-    'id':2,
-    'titulo':'desenvolvedor frontend',
-    'localidade':'Parana',
-    'salario':'R$ 3.500,00'},
-  {
-    'id':3,
-    'titulo':'analista de dados',
-    'localidade':'sao paulo',
-    'salario':'R$ 5.000,00'
-  },
-  {
-    'id':4,
-    'titulo':'analista de dados',
-    'localidade':'Rio de Janeiro',
-    'salario':'R$ 3.500,00'},
-  {
-    'id':5,
-    'titulo':'UI/UIX desing',
-    'localidade':'Malta',
-    'salario':'R$ 2.500,00'}
-]
+  return render_template("home.html", vagas=VAGAS)
 
 
 if __name__ == "__main__":
